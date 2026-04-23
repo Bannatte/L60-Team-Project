@@ -1,6 +1,7 @@
 #ifndef GETINPUT_HPP
 #define GETINPUT_HPP
 #include <iostream>
+#include <fstream>
 #include <string>
 
 #define MAX_GRADES 5
@@ -34,6 +35,14 @@ void getStudentInfo(Student* s) {
             std::cin  >> s->grades[i];
         } while (s->grades[i] < 0 || s->grades[i] > 100);
     }
+
+    // Save raw data to file — no labels, print function handles formatting
+    std::ofstream file("info.txt");
+    file << s->name << "\n";
+    file << s->gradeCount << "\n";
+    for (int i = 0; i < s->gradeCount; i++)
+        file << s->grades[i] << "\n";
+    file.close();
 }
 
 #endif
