@@ -28,7 +28,19 @@ inline float calculateGpa(const std::string& filename) // reference to the strin
 	float gpa = 0;
 	for (int i = 0; i < numClasses; i++) {
 		inFile >> grades[i];
-		gpa += grades[i];
+		float grade = grades[i];
+
+		if (grade >= 90) { // 90 and above
+			gpa += 4.0;
+		} else if (grade >= 80) { // 80 to 89.9
+			gpa += 3.0;
+		} else if (grade >= 70) { // 70 to 79.9
+			gpa += 2.0;
+		} else if (grade >= 60) { // 60 to 69.9
+			gpa += 1.0;
+		} else { // 59.9 and below
+			gpa += 0;
+		}
 	}
 
 	delete[] grades;
