@@ -58,6 +58,6 @@ inline int mainCalculation() {
 		return -1;
 	}
 	
-    	writeGpaToFile("gpa.txt", studentGpa);
+    writeGpaToFile("gpa.txt", studentGpa);
 	return 0;
 }
