@@ -15,7 +15,7 @@ char getLetterGrade(float gpa)
   else if (gpa >= 1.0)
     return 'D';
   else
-    return 'F':
+    return 'F';
 }
 void printResults(Student* s)
 {
