@@ -34,3 +34,4 @@ std::cout << "\n===== GPA Results =====\n";
 	std::cout << "Letter Grade: " << s->letterGrade << "\n";
 	std::cout << "=======================\n";
 }
+#endif
