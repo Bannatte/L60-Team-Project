@@ -8,7 +8,7 @@ int main() {
   getStudentInfo(&s);
   int result = mainCalculation();
   if (result != 0) {
-    std::cout << "Error: something wrong with caculations"
+    std::cout << "Error: something wrong with caculations\n";
       return 1;
   }
 std::ifstream gpaFile("gpa.txt");
